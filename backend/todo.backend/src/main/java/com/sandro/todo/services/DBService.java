@@ -23,8 +23,9 @@ public class DBService {
 		Todo t2 = new Todo(null, "Combar de Akali", "Acertar o E", sdf.parse("11/07/2022"), false);
 		Todo t3 = new Todo(null, "Combar de Katarina", "Nao ficar forte e perder em seguida", sdf.parse("11/07/2022"),
 				false);
+		Todo t4 = new Todo(null, "Combar de boneco bom", "Varias mecanicas e morrer pro ameba jogando de yone", sdf.parse("10/07/2022"), true);
 		
-		todoRepository.saveAll(Arrays.asList(t1,t2,t3));
+		todoRepository.saveAll(Arrays.asList(t1,t2,t3,t4));
 
 	}
 }
