@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 
 @Entity
@@ -20,6 +22,8 @@ public class Todo implements Serializable{
 	private Integer id;
 	private String titulo;
 	private String descricao;
+	
+	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date dataParaFinalizar;
 	private Boolean finalizado = false;
 
