@@ -40,4 +40,10 @@ public class TodoResource {
 		return ResponseEntity.ok().body(list);
 	}
 	
+	@GetMapping
+	public ResponseEntity<List<Todo>> listAll() {//metodo que lista todos os afazeres
+		List<Todo> list = service.findAll();
+		return ResponseEntity.ok().body(list);
+	}
+	
 }
