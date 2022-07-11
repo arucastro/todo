@@ -45,4 +45,13 @@ public class TodoService {
 	public void delete(Integer id) {
 		repository.deleteById(id);
 	}
+
+	public Todo update(Integer id, Todo obj) {
+		Todo newObj = findById(id);
+		newObj.setTitulo(obj.getTitulo());
+		newObj.setDataParaFinalizar(obj.getDataParaFinalizar());
+		newObj.setDescricao(obj.getDescricao());
+		newObj.setFinalizado(obj.getFinalizado());
+		return repository.save(newObj);
+	}
 }
