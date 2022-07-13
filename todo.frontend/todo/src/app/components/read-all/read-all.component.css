@@ -32,3 +32,16 @@ p{
 .actions button{
     margin: .5rem;
 }
+
+.badge{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge button{
+    width: 100%;
+    margin: auto;
+}
+
