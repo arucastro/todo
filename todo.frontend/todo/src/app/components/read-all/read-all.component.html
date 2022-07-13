@@ -4,7 +4,8 @@
   </button>
 
   <div class="badge">
-    <button (click)="navegaParaFinalizados()"
+    <button
+      (click)="navegaParaFinalizados()"
       class="mat-elevation-z8"
       mat-raised-button
       matBadge="{{ closed }}"
@@ -21,7 +22,7 @@
         <mat-card-subtitle>{{ item.descricao }}</mat-card-subtitle>
       </mat-card-header>
       <div class="actions">
-        <button mat-mini-fab color="primary">
+        <button (click)="finalizar(item)" mat-mini-fab color="primary">
           <mat-icon>done</mat-icon>
         </button>
 

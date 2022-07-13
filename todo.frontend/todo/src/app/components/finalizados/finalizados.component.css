@@ -7,6 +7,14 @@
     width: 100%;
 }
 
+h1{
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: .5rem;
+    color: rgb(65, 73, 80);
+}
+
 .badge button {
     margin-top: 1.5rem;
     width: 100%;
