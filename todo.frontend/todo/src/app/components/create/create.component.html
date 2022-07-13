@@ -1,1 +1,29 @@
-<p>create works!</p>
+<form>
+  <h1>Criando novo ToDo</h1>
+
+  <mat-form-field class="data-finalizar" appearance="fill">
+    <mat-label>Data para Finalizar</mat-label>
+    <input matInput [matDatepicker]="dp3" disabled />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+  </mat-form-field>
+
+  <div class="forms">
+    <mat-form-field class="form" appearance="fill">
+        <mat-label>Titulo</mat-label>
+        <input matInput placeholder="Ex. Estudar">
+      </mat-form-field>
+    
+      <mat-form-field class="form" appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input matInput placeholder="Ex. Estudar JP">
+      </mat-form-field>
+  </div>
+
+  <div class="buttons">
+    <button mat-raised-button color="primary">Criar</button>
+    
+    <button mat-raised-button color="warn">Cancelar</button>
+  </div>
+</form>

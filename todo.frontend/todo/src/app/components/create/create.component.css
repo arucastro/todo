@@ -1,0 +1,29 @@
+form{
+    width: 85%;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+}
+
+.data-finalizar{
+    text-align: start;
+}
+
+h1{
+    font-size: x-large;
+    font-weight: bold;
+    margin: 2rem;
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+}
+
+.buttons{
+    width: 100%;
+}
+
+button{
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
