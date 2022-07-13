@@ -1,0 +1,25 @@
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.content {
+    width: 100%;
+}
+
+.badge button {
+    margin-top: 1.5rem;
+    width: 100%;
+    background-color:coral;
+}
+
+p{
+    text-align: end;
+    font-weight: bold;
+    padding-bottom: 0%;
+}
+
+mat-card{
+    margin-top: .8rem;
+    padding: .2rem;
+}

@@ -20,7 +20,7 @@ mat-card{
 p{
     text-align: end;
     font-weight: 600;
-    color: sandybrown;
+    color: rgb(153, 101, 55);
     font-style: italic;
     padding-bottom: 0;
 }
@@ -43,5 +43,6 @@ p{
 .badge button{
     width: 100%;
     margin: auto;
+    background-color: coral;
 }
 
