@@ -31,7 +31,7 @@ export class CreateComponent implements OnInit {
         this.service.message("Nova tarefa criada com sucesso!");
         this.router.navigate([""]);
       },
-      (err) => {
+      (error) => {
         this.service.message("falha ao criar tarefa");
         this.router.navigate([""]);
       }
