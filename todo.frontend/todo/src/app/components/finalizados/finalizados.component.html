@@ -1,8 +1,10 @@
 <div class="container">
-  <h1>Tasks Finalizadas </h1>
+  <h1>Tasks Finalizadas</h1>
 
   <div class="badge">
-    <button mat-raised-button (click)="voltar()" class="mat-elevation-z8">Voltar</button>
+    <button mat-raised-button (click)="voltar()" class="mat-elevation-z8">
+      Voltar
+    </button>
   </div>
 
   <div class="content" *ngFor="let item of listFinished">
@@ -12,6 +14,11 @@
         <mat-card-title>{{ item.titulo }}</mat-card-title>
         <mat-card-subtitle>{{ item.descricao }}</mat-card-subtitle>
       </mat-card-header>
+      <div class="actions">
+        <button (click)="delete(item.id)" mat-mini-fab color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
     </mat-card>
   </div>
 </div>

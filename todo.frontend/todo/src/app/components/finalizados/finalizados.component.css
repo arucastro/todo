@@ -21,6 +21,10 @@ h1{
     background-color:coral;
 }
 
+.actions{
+    text-align: end;
+}
+
 p{
     text-align: end;
     font-weight: bold;
