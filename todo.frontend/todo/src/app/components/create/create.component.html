@@ -3,8 +3,7 @@
 
   <mat-form-field class="data-finalizar" appearance="fill">
     <mat-label>Data para Finalizar</mat-label>
-    <input matInput [matDatepicker]="dp3" disabled />
-    <mat-hint>MM/DD/YYYY</mat-hint>
+    <input [(ngModel)]="todo.dataParaFinalizar" name="todo.dataParaFinalizar" matInput [matDatepicker]="dp3" disabled />
     <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
     <mat-datepicker #dp3 disabled="false"></mat-datepicker>
   </mat-form-field>
@@ -12,17 +11,17 @@
   <div class="forms">
     <mat-form-field class="form" appearance="fill">
         <mat-label>Titulo</mat-label>
-        <input matInput placeholder="Ex. Estudar">
+        <input [(ngModel)]="todo.titulo" name="todo.titulo" matInput placeholder="Ex. Estudar">
       </mat-form-field>
     
       <mat-form-field class="form" appearance="fill">
         <mat-label>Descrição</mat-label>
-        <input matInput placeholder="Ex. Estudar JP">
+        <input [(ngModel)]="todo.descricao" name="todo.descricao" matInput placeholder="Ex. Estudar JP">
       </mat-form-field>
   </div>
 
   <div class="buttons">
-    <button mat-raised-button color="primary">Criar</button>
+    <button (click)="create()" mat-raised-button color="primary">Criar</button>
     
     <button (click)="cancela()" mat-raised-button color="warn">Cancelar</button>
   </div>
