@@ -2,8 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Todo } from "src/app/models/todo";
 import { TodoService } from "src/app/services/todo.service";
-import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
-import { ConfirmDialogComponent } from "../confirm-dialog/confirm-dialog.component";
 
 @Component({
   selector: "app-finalizados",
@@ -16,7 +14,6 @@ export class FinalizadosComponent implements OnInit {
   constructor(
     private service: TodoService,
     private router: Router,
-    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -44,17 +41,5 @@ export class FinalizadosComponent implements OnInit {
 
   voltar(): void {
     this.router.navigate([""]);
-  }
-
-  openDialog(id: any): void {
-    const dialogConfig = new MatDialogConfig();
-
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-
-    dialogConfig.data = { id };
-
-    this.dialog.open(ConfirmDialogComponent, dialogConfig);
-    console.log(id)
   }
 }
