@@ -11,10 +11,7 @@ import { TodoService } from "src/app/services/todo.service";
 export class FinalizadosComponent implements OnInit {
   listFinished: Todo[] = [];
 
-  constructor(
-    private service: TodoService,
-    private router: Router,
-  ) {}
+  constructor(private service: TodoService, private router: Router) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -31,12 +28,16 @@ export class FinalizadosComponent implements OnInit {
   }
 
   delete(id: any): void {
-    this.service.delete(id).subscribe((resposta) => {
-      if (resposta === null) {
-        this.service.message("Tarefa deletada com sucesso");
-        this.listFinished = this.listFinished.filter((todo) => todo.id !== id);
-      } else this.service.message("Algo deu errado");
-    });
+    if (window.confirm("Temm certeza de que deseja deletar?")) {
+      this.service.delete(id).subscribe((resposta) => {
+        if (resposta === null) {
+          this.service.message("Tarefa deletada com sucesso");
+          this.listFinished = this.listFinished.filter(
+            (todo) => todo.id !== id
+          );
+        } else this.service.message("Algo deu errado");
+      });
+    }
   }
 
   voltar(): void {
