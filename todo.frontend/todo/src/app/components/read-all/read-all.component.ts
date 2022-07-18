@@ -49,13 +49,15 @@ export class ReadAllComponent implements OnInit {
     this.dialogService
       .openConfirmDialog("Tem certeza que deseja deletar?")
       .afterClosed()
-      .subscribe((resposta) => {
-        this.service.delete(id).subscribe((resposta) => {
-          if (resposta === null) {
-            this.service.message("Tarefa deletada com sucesso");
-            this.list = this.list.filter((todo) => todo.id !== id);
-          } else this.service.message("Algo deu errado");
-        });
+      .subscribe((resp) => {
+        if (resp === true) {
+          this.service.delete(id).subscribe((resposta) => {
+            if (resposta === null) {
+              this.service.message("Tarefa deletada com sucesso");
+              this.list = this.list.filter((todo) => todo.id !== id);
+            } else this.service.message("Algo deu errado");
+          });
+        }
       });
   }
 

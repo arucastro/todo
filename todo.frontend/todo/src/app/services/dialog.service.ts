@@ -19,4 +19,8 @@ export class DialogService {
       },
     });
   }
+
+  closeConfirmDialog(): void {
+    this.dialog.closeAll;
+  }
 }
