@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, TitleStrategy } from "@angular/router";
+import { Router} from "@angular/router";
 import { Todo } from "src/app/models/todo";
 import { TodoService } from "src/app/services/todo.service";
 

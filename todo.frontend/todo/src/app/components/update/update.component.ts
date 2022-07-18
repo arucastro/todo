@@ -28,7 +28,8 @@ export class UpdateComponent implements OnInit {
   }
 
   update(): void {
-    this.service.update(this.todo).subscribe((resposta) => {
+    this.service.update(this.todo).subscribe(
+      (resposta) => {
         this.service.message("Tarefa atualizada com sucesso!");
         this.router.navigate([""]);
       },

@@ -3,7 +3,6 @@ import { Router } from "@angular/router";
 import { Todo } from "src/app/models/todo";
 import { DialogService } from "src/app/services/dialog.service";
 import { TodoService } from "src/app/services/todo.service";
-import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
   selector: "app-finalizados",
