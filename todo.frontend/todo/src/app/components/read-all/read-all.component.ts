@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Todo } from "src/app/models/todo";
+import { DialogService } from "src/app/services/dialog.service";
 import { TodoService } from "src/app/services/todo.service";
 
 @Component({
@@ -14,7 +15,11 @@ export class ReadAllComponent implements OnInit {
   list: Todo[] = [];
   listFinished: Todo[] = [];
 
-  constructor(private service: TodoService, private router: Router) {}
+  constructor(
+    private service: TodoService,
+    private router: Router,
+    private dialogService: DialogService
+  ) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -41,14 +46,17 @@ export class ReadAllComponent implements OnInit {
   }
 
   delete(id: any): void {
-    if (window.confirm("Temm certeza de que deseja deletar?")) {
-      this.service.delete(id).subscribe((resposta) => {
-        if (resposta === null) {
-          this.service.message("Tarefa deletada com sucesso");
-          this.list = this.list.filter((todo) => todo.id !== id);
-        } else this.service.message("Algo deu errado");
+    this.dialogService
+      .openConfirmDialog("Tem certeza que deseja deletar?")
+      .afterClosed()
+      .subscribe((resposta) => {
+        this.service.delete(id).subscribe((resposta) => {
+          if (resposta === null) {
+            this.service.message("Tarefa deletada com sucesso");
+            this.list = this.list.filter((todo) => todo.id !== id);
+          } else this.service.message("Algo deu errado");
+        });
       });
-    }
   }
 
   navegaParaFinalizados(): void {

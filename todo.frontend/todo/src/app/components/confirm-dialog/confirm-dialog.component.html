@@ -1,0 +1,12 @@
+<h1 class="aviso" mat-dialog-title>Deletando tarefa</h1>
+<div class="mensagem" mat-dialog-content>
+  {{ data.message }}
+</div>
+<div class="buttons" mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close cdkFocusInitial color="primary">
+    Cancelar
+  </button>
+  <button mat-raised-button [mat-dialog-close]="true" color="warn">
+    Deletar
+  </button>
+</div>

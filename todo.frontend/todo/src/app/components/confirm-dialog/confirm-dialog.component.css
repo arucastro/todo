@@ -1,0 +1,16 @@
+.aviso{
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.mensagem{
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttons button{
+    margin-top: .2rem;
+    margin: auto;
+}

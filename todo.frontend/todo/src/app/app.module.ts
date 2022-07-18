@@ -22,6 +22,8 @@ import { MatInputModule } from "@angular/material/input";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { UpdateComponent } from "./components/update/update.component";
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { UpdateComponent } from "./components/update/update.component";
     FinalizadosComponent,
     CreateComponent,
     UpdateComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import { UpdateComponent } from "./components/update/update.component";
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
